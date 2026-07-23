@@ -3,10 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Animation événementielle et location de matériel son et lumière. Estimez votre prestation et demandez un devis en quelques minutes." />
-  <meta name="theme-color" content="#080b16" />
-  <title>Pulse Event — Son, lumière & animation</title>
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <meta name="description" content="Loïc Animation — animation événementielle et location de matériel son et lumière. Demandez votre devis en quelques clics." />
+  <meta name="theme-color" content="#0b0814" />
+  <title>Loïc Animation — Son, lumière & événements</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -14,462 +16,264 @@
   <div class="cursor-glow" aria-hidden="true"></div>
 
   <header class="site-header" id="top">
-    <a class="brand" href="#top" aria-label="Retour en haut">
-      <span class="brand-mark" aria-hidden="true">
-        <i></i><i></i><i></i><i></i>
-      </span>
-      <span>
-        <strong data-config="brandName">Pulse Event</strong>
-        <small>Son • Lumière • Animation</small>
-      </span>
+    <a class="brand" href="#top" aria-label="Accueil Loïc Animation">
+      <img src="assets/logo.svg" alt="Logo Loïc Animation" class="brand-logo" />
+      <span>Loïc Animation</span>
     </a>
-
     <nav class="desktop-nav" aria-label="Navigation principale">
       <a href="#services">Services</a>
       <a href="#formules">Formules</a>
-      <a href="#devis">Devis</a>
-      <a class="nav-cta" href="#devis">Estimer mon événement</a>
+      <a href="#location">Location</a>
+      <a href="#galerie">Galerie</a>
+      <a href="#avis">Avis</a>
     </nav>
-
-    <button class="menu-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false">
-      <span></span><span></span>
-    </button>
+    <div class="header-actions">
+      <button class="sound-toggle" id="soundToggle" type="button" aria-pressed="false" title="Activer l'ambiance sonore">
+        <span class="sound-bars" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+        <span class="sound-label">Son</span>
+      </button>
+      <a class="button button-small" href="#devis">Devis express</a>
+    </div>
   </header>
 
-  <div class="mobile-menu" aria-hidden="true">
-    <a href="#services">Services</a>
-    <a href="#formules">Formules</a>
-    <a href="#devis">Demander un devis</a>
-  </div>
-
   <main>
-    <section class="hero section">
+    <section class="hero section-pad">
+      <div class="hero-orb hero-orb-one"></div>
+      <div class="hero-orb hero-orb-two"></div>
       <div class="hero-copy reveal">
-        <div class="eyebrow"><span></span> Votre événement, notre énergie</div>
-        <h1>
-          Faites vibrer
-          <span class="gradient-text">chaque instant.</span>
-        </h1>
-        <p class="hero-intro">
-          Animation, sonorisation et mise en lumière pour mariages, anniversaires,
-          soirées privées, événements associatifs et professionnels.
-        </p>
-
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#devis">
-            Estimer mon projet
-            <span aria-hidden="true">↗</span>
-          </a>
-          <a class="btn btn-ghost" href="#formules">Voir les formules</a>
+        <p class="eyebrow"><span></span> Animation • Son • Lumière • Location</p>
+        <h1>Des événements qui<br><em>font vibrer.</em></h1>
+        <p class="hero-text">Une prestation sur mesure pour vos mariages, anniversaires, soirées privées, événements d'entreprise et besoins en matériel.</p>
+        <div class="hero-cta">
+          <a class="button" href="#devis">Composer mon événement</a>
+          <a class="button button-ghost" href="#galerie">Voir l'ambiance</a>
         </div>
-
-        <div class="hero-points" aria-label="Points forts">
-          <div><strong>3</strong><span>formules simples</span></div>
+        <div class="hero-stats">
+          <div><strong>3</strong><span>formules flexibles</span></div>
           <div><strong>100%</strong><span>personnalisable</span></div>
-          <div><strong>1 min</strong><span>pour estimer</span></div>
+          <div><strong>24h</strong><span>pour une réponse*</span></div>
         </div>
       </div>
-
-      <div class="hero-visual reveal" aria-label="Illustration audio et lumière">
-        <div class="orb orb-one"></div>
-        <div class="orb orb-two"></div>
+      <div class="hero-visual reveal" data-delay="150">
         <div class="stage-card">
-          <div class="stage-topline">
-            <span>LIVE EXPERIENCE</span>
-            <span class="live-dot">EN DIRECT</span>
-          </div>
-          <div class="equalizer" aria-hidden="true">
-            <span style="--h:35%"></span>
-            <span style="--h:67%"></span>
-            <span style="--h:48%"></span>
-            <span style="--h:88%"></span>
-            <span style="--h:58%"></span>
-            <span style="--h:96%"></span>
-            <span style="--h:44%"></span>
-            <span style="--h:74%"></span>
-            <span style="--h:52%"></span>
-            <span style="--h:90%"></span>
-            <span style="--h:62%"></span>
-            <span style="--h:39%"></span>
-          </div>
-          <div class="stage-meta">
-            <div>
-              <small>AMBIANCE</small>
-              <strong>Sur mesure</strong>
-            </div>
-            <div class="turntable" aria-hidden="true">
-              <span></span>
-            </div>
+          <div class="stage-lights"><span></span><span></span><span></span></div>
+          <img src="assets/hero-stage.svg" alt="Illustration d'une scène événementielle avec son et lumière" />
+          <div class="now-playing">
+            <div class="disc"></div>
+            <div><small>Votre événement</small><strong>En mode inoubliable</strong></div>
+            <div class="mini-bars"><i></i><i></i><i></i><i></i><i></i></div>
           </div>
         </div>
-        <div class="floating-tag tag-one">SON PRO</div>
-        <div class="floating-tag tag-two">LIGHT SHOW</div>
-        <div class="floating-tag tag-three">ANIMATION</div>
       </div>
-
-      <a class="scroll-cue" href="#services" aria-label="Découvrir la suite">
-        <span></span>
-        Découvrir
-      </a>
+      <a class="scroll-indicator" href="#services" aria-label="Découvrir la suite"><span></span>Découvrir</a>
     </section>
 
-    <section class="marquee-wrap" aria-hidden="true">
-      <div class="marquee">
-        <span>MARIAGE</span><i>✦</i>
-        <span>ANNIVERSAIRE</span><i>✦</i>
-        <span>SOIRÉE PRIVÉE</span><i>✦</i>
-        <span>ÉVÉNEMENT PRO</span><i>✦</i>
-        <span>ASSOCIATION</span><i>✦</i>
-        <span>MARIAGE</span><i>✦</i>
-        <span>ANNIVERSAIRE</span><i>✦</i>
-        <span>SOIRÉE PRIVÉE</span><i>✦</i>
+    <section class="marquee" aria-label="Types de prestations">
+      <div class="marquee-track">
+        <span>Mariages ✦</span><span>Anniversaires ✦</span><span>Soirées privées ✦</span><span>Événements pro ✦</span><span>Sonorisation ✦</span><span>Éclairage ✦</span>
+        <span>Mariages ✦</span><span>Anniversaires ✦</span><span>Soirées privées ✦</span><span>Événements pro ✦</span><span>Sonorisation ✦</span><span>Éclairage ✦</span>
       </div>
     </section>
 
-    <section class="section services" id="services">
+    <section class="section section-pad" id="services">
       <div class="section-heading reveal">
-        <div class="eyebrow"><span></span> Une prestation complète</div>
-        <h2>Tout ce qu’il faut pour <span>créer l’ambiance.</span></h2>
-        <p>Une solution claire, évolutive et adaptée au format de votre événement.</p>
+        <p class="eyebrow"><span></span> Nos expertises</p>
+        <h2>Tout ce qu'il faut pour<br><em>créer l'ambiance.</em></h2>
       </div>
-
       <div class="service-grid">
         <article class="service-card reveal">
-          <div class="service-icon" aria-hidden="true">♫</div>
           <span class="service-number">01</span>
-          <h3>Sonorisation</h3>
-          <p>Diffusion adaptée à votre espace, micros, réglages et accompagnement technique.</p>
-          <ul>
-            <li>Enceintes professionnelles</li>
-            <li>Micros filaires ou sans fil</li>
-            <li>Installation et tests</li>
-          </ul>
+          <div class="service-icon">♫</div>
+          <h3>Animation musicale</h3>
+          <p>Une programmation adaptée à votre public, vos temps forts et l'énergie souhaitée.</p>
         </article>
-
-        <article class="service-card reveal">
-          <div class="service-icon" aria-hidden="true">✦</div>
+        <article class="service-card reveal" data-delay="100">
           <span class="service-number">02</span>
-          <h3>Mise en lumière</h3>
-          <p>Éclairage d’ambiance, effets dynamiques et scénographie lumineuse.</p>
-          <ul>
-            <li>Projecteurs LED</li>
-            <li>Effets et mouvements</li>
-            <li>Ambiances personnalisées</li>
-          </ul>
+          <div class="service-icon">◉</div>
+          <h3>Sonorisation</h3>
+          <p>Une diffusion claire, équilibrée et dimensionnée selon le lieu et le nombre d'invités.</p>
         </article>
-
-        <article class="service-card reveal">
-          <div class="service-icon" aria-hidden="true">◎</div>
+        <article class="service-card reveal" data-delay="200">
           <span class="service-number">03</span>
-          <h3>Animation</h3>
-          <p>Une présence dynamique pour rythmer les temps forts et fédérer vos invités.</p>
-          <ul>
-            <li>Animation micro</li>
-            <li>Jeux et interventions</li>
-            <li>Coordination des moments clés</li>
-          </ul>
+          <div class="service-icon">✦</div>
+          <h3>Mise en lumière</h3>
+          <p>Éclairage d'ambiance, effets dynamiques et valorisation des espaces clés.</p>
+        </article>
+        <article class="service-card reveal" data-delay="300">
+          <span class="service-number">04</span>
+          <div class="service-icon">▣</div>
+          <h3>Location de matériel</h3>
+          <p>Enceintes, micros, lumières et accessoires disponibles à la carte.</p>
         </article>
       </div>
     </section>
 
-    <section class="section packages-section" id="formules">
-      <div class="section-heading reveal">
-        <div class="eyebrow"><span></span> Des offres lisibles</div>
-        <h2>Choisissez votre <span>niveau d’expérience.</span></h2>
-        <p>Les tarifs ci-dessous servent de base indicative. Chaque événement reste personnalisable.</p>
+    <section class="section section-pad section-dark" id="formules">
+      <div class="section-heading split reveal">
+        <div>
+          <p class="eyebrow"><span></span> Formules événement</p>
+          <h2>Choisissez votre<br><em>niveau d'expérience.</em></h2>
+        </div>
+        <p>Les tarifs affichés sont indicatifs. Le montant final dépend du lieu, de la durée, du nombre d'invités et des options.</p>
       </div>
+      <div class="package-grid" id="packageGrid"></div>
+    </section>
 
-      <div class="package-grid">
-        <article class="package-card reveal" data-package="essentiel">
-          <div class="package-top">
-            <span class="package-kicker">Format intimiste</span>
-            <h3>Essentiel</h3>
-            <p>Anniversaire, repas de famille, petite soirée privée.</p>
-          </div>
-          <div class="price"><small>À partir de</small><strong>490 €</strong></div>
-          <ul>
-            <li>Jusqu’à 80 personnes</li>
-            <li>Sonorisation 2 enceintes</li>
-            <li>1 micro</li>
-            <li>Éclairage d’ambiance</li>
-            <li>Jusqu’à 4 heures</li>
-          </ul>
-          <button class="btn package-select" type="button" data-select-package="essentiel">Choisir Essentiel</button>
-        </article>
+    <section class="section section-pad" id="location">
+      <div class="section-heading split reveal">
+        <div>
+          <p class="eyebrow"><span></span> Location à la carte</p>
+          <h2>Le matériel dont vous avez<br><em>besoin, simplement.</em></h2>
+        </div>
+        <p>Sélectionnez vos équipements : ils seront automatiquement ajoutés à votre estimation.</p>
+      </div>
+      <div class="filter-row reveal" id="rentalFilters"></div>
+      <div class="rental-grid" id="rentalGrid"></div>
+    </section>
 
-        <article class="package-card featured reveal" data-package="signature">
-          <div class="popular-badge">Le plus choisi</div>
-          <div class="package-top">
-            <span class="package-kicker">Expérience complète</span>
-            <h3>Signature</h3>
-            <p>Mariage, événement d’entreprise, soirée associative.</p>
-          </div>
-          <div class="price"><small>À partir de</small><strong>890 €</strong></div>
-          <ul>
-            <li>Jusqu’à 180 personnes</li>
-            <li>Sonorisation renforcée</li>
-            <li>2 micros sans fil</li>
-            <li>Éclairage dynamique</li>
-            <li>Animation micro</li>
-            <li>Jusqu’à 6 heures</li>
-          </ul>
-          <button class="btn btn-primary package-select" type="button" data-select-package="signature">Choisir Signature</button>
-        </article>
-
-        <article class="package-card reveal" data-package="premium">
-          <div class="package-top">
-            <span class="package-kicker">Grand format</span>
-            <h3>Premium</h3>
-            <p>Grande réception, gala, lancement et événement extérieur.</p>
-          </div>
-          <div class="price"><small>À partir de</small><strong>1 490 €</strong></div>
-          <ul>
-            <li>Jusqu’à 350 personnes</li>
-            <li>Système son grande puissance</li>
-            <li>Parc lumière complet</li>
-            <li>Machine à fumée</li>
-            <li>Animation et coordination</li>
-            <li>Jusqu’à 8 heures</li>
-          </ul>
-          <button class="btn package-select" type="button" data-select-package="premium">Choisir Premium</button>
-        </article>
+    <section class="section section-pad section-media" id="galerie">
+      <div class="section-heading split reveal">
+        <div>
+          <p class="eyebrow"><span></span> En images</p>
+          <h2>Une ambiance qui se<br><em>vit avant de se raconter.</em></h2>
+        </div>
+        <div class="carousel-controls">
+          <button type="button" id="prevSlide" aria-label="Image précédente">←</button>
+          <button type="button" id="nextSlide" aria-label="Image suivante">→</button>
+        </div>
+      </div>
+      <div class="carousel reveal" id="carousel">
+        <div class="carousel-track" id="carouselTrack"></div>
+      </div>
+      <div class="video-block reveal">
+        <div class="video-copy">
+          <p class="eyebrow"><span></span> Showreel</p>
+          <h3>Plongez dans l'expérience Loïc Animation.</h3>
+          <p>La vidéo ci-contre est configurable en modifiant simplement l'identifiant YouTube dans le fichier <code>data.js</code>.</p>
+        </div>
+        <div class="video-frame" id="videoFrame"></div>
       </div>
     </section>
 
-    <section class="section process-section">
-      <div class="process-panel reveal">
-        <div class="section-heading left">
-          <div class="eyebrow"><span></span> Simple et rapide</div>
-          <h2>Votre devis en <span>3 étapes.</span></h2>
+    <section class="section section-pad" id="avis">
+      <div class="section-heading split reveal">
+        <div>
+          <p class="eyebrow"><span></span> Ils nous font confiance</p>
+          <h2>Des souvenirs forts,<br><em>des retours sincères.</em></h2>
         </div>
-
-        <div class="process-list">
-          <article>
-            <span>01</span>
-            <div>
-              <h3>Décrivez votre événement</h3>
-              <p>Type, date, lieu, nombre d’invités et durée estimée.</p>
-            </div>
-          </article>
-          <article>
-            <span>02</span>
-            <div>
-              <h3>Composez votre prestation</h3>
-              <p>Choisissez une formule puis ajoutez les options utiles.</p>
-            </div>
-          </article>
-          <article>
-            <span>03</span>
-            <div>
-              <h3>Recevez une réponse personnalisée</h3>
-              <p>Votre demande est envoyée avec un récapitulatif clair.</p>
-            </div>
-          </article>
-        </div>
+        <a class="button button-ghost" id="googleReviewsLink" href="#" target="_blank" rel="noopener">Voir les avis Google</a>
       </div>
+      <div class="reviews-grid" id="reviewsGrid"></div>
+      <p class="reviews-note reveal">Les avis affichés sont des exemples de mise en page à remplacer par les avis réels du prestataire.</p>
     </section>
 
-    <section class="section quote-section" id="devis">
-      <div class="quote-layout">
-        <div class="quote-intro reveal">
-          <div class="eyebrow"><span></span> Estimation instantanée</div>
-          <h2>Parlons de votre <span>prochain événement.</span></h2>
-          <p>
-            Remplissez les informations essentielles. Le montant affiché est une estimation
-            indicative, à confirmer après échange sur les contraintes techniques et logistiques.
-          </p>
-
-          <div class="contact-card">
-            <span>Un projet urgent ?</span>
-            <a data-config-href="phone" href="tel:+262692000000">+262 692 00 00 00</a>
-            <small>Du lundi au samedi • 9h–18h</small>
-          </div>
+    <section class="section section-pad quote-section" id="devis">
+      <div class="quote-intro reveal">
+        <p class="eyebrow"><span></span> Devis express</p>
+        <h2>Parlez-nous de<br><em>votre événement.</em></h2>
+        <p>Construisez votre demande en quelques étapes. Une estimation indicative se met à jour automatiquement.</p>
+        <div class="quote-contact">
+          <a id="phoneLink" href="#"><small>Téléphone</small><strong id="phoneText">À renseigner</strong></a>
+          <a id="emailLink" href="#"><small>Email</small><strong id="emailText">À renseigner</strong></a>
         </div>
+      </div>
 
-        <form class="quote-form reveal" id="quoteForm" novalidate>
-          <div class="form-grid">
-            <label>
-              <span>Nom et prénom *</span>
-              <input type="text" name="name" autocomplete="name" placeholder="Votre nom" required />
-              <small class="field-error"></small>
+      <form class="quote-form reveal" id="quoteForm">
+        <div class="form-step">
+          <span class="step-label">01 — Votre événement</span>
+          <div class="form-grid two">
+            <label>Type d'événement
+              <select id="eventType" name="eventType" required></select>
             </label>
-
-            <label>
-              <span>Téléphone *</span>
-              <input type="tel" name="phone" autocomplete="tel" placeholder="06 92 00 00 00" required />
-              <small class="field-error"></small>
+            <label>Nombre d'invités
+              <input id="guestCount" name="guestCount" type="number" min="1" value="80" required />
             </label>
-
-            <label>
-              <span>E-mail *</span>
-              <input type="email" name="email" autocomplete="email" placeholder="vous@email.com" required />
-              <small class="field-error"></small>
+            <label>Date souhaitée
+              <input id="eventDate" name="eventDate" type="date" required />
             </label>
-
-            <label>
-              <span>Date de l’événement *</span>
-              <input type="date" name="date" required />
-              <small class="field-error"></small>
-            </label>
-
-            <label>
-              <span>Type d’événement *</span>
-              <select name="eventType" required>
-                <option value="">Choisir</option>
-                <option value="anniversaire">Anniversaire / soirée privée</option>
-                <option value="mariage">Mariage</option>
-                <option value="entreprise">Événement d’entreprise</option>
-                <option value="association">Événement associatif</option>
-                <option value="exterieur">Événement extérieur</option>
-              </select>
-              <small class="field-error"></small>
-            </label>
-
-            <label>
-              <span>Lieu / commune *</span>
-              <input type="text" name="location" placeholder="Ex. Saint-Denis" required />
-              <small class="field-error"></small>
-            </label>
-
-            <label>
-              <span>Nombre d’invités</span>
-              <input type="number" name="guests" min="1" max="1000" value="80" />
-            </label>
-
-            <label>
-              <span>Durée souhaitée</span>
-              <select name="duration">
-                <option value="4">4 heures</option>
-                <option value="5">5 heures</option>
-                <option value="6">6 heures</option>
-                <option value="7">7 heures</option>
-                <option value="8">8 heures</option>
-                <option value="10">10 heures</option>
+            <label>Durée estimée
+              <select id="duration" name="duration">
+                <option value="4">Jusqu'à 4 heures</option>
+                <option value="6" selected>Jusqu'à 6 heures</option>
+                <option value="8">Jusqu'à 8 heures</option>
+                <option value="10">Plus de 8 heures</option>
               </select>
             </label>
           </div>
-
-          <fieldset class="formula-choice">
-            <legend>Choisissez une formule *</legend>
-            <div class="radio-cards">
-              <label>
-                <input type="radio" name="package" value="essentiel" required />
-                <span><strong>Essentiel</strong><small>À partir de 490 €</small></span>
-              </label>
-              <label>
-                <input type="radio" name="package" value="signature" required checked />
-                <span><strong>Signature</strong><small>À partir de 890 €</small></span>
-              </label>
-              <label>
-                <input type="radio" name="package" value="premium" required />
-                <span><strong>Premium</strong><small>À partir de 1 490 €</small></span>
-              </label>
-            </div>
-          </fieldset>
-
-          <fieldset class="addons">
-            <legend>Ajoutez des options</legend>
-            <div class="addon-grid">
-              <label>
-                <input type="checkbox" name="addons" value="extra-speakers" />
-                <span><strong>Renfort son</strong><small>+ 180 €</small></span>
-              </label>
-              <label>
-                <input type="checkbox" name="addons" value="wireless-mic" />
-                <span><strong>Micro sans fil</strong><small>+ 60 €</small></span>
-              </label>
-              <label>
-                <input type="checkbox" name="addons" value="light-pack" />
-                <span><strong>Pack lumière +</strong><small>+ 240 €</small></span>
-              </label>
-              <label>
-                <input type="checkbox" name="addons" value="smoke-machine" />
-                <span><strong>Machine à fumée</strong><small>+ 90 €</small></span>
-              </label>
-              <label>
-                <input type="checkbox" name="addons" value="host" />
-                <span><strong>Animation micro</strong><small>+ 220 €</small></span>
-              </label>
-              <label>
-                <input type="checkbox" name="addons" value="setup-day-before" />
-                <span><strong>Installation anticipée</strong><small>+ 150 €</small></span>
-              </label>
-            </div>
-          </fieldset>
-
-          <label class="full-width">
-            <span>Précisions utiles</span>
-            <textarea name="message" rows="4" placeholder="Horaires, accès, besoins particuliers, thème, contraintes techniques…"></textarea>
+          <label>Lieu / commune
+            <input id="location" name="location" type="text" placeholder="Ex. Saint-Denis, salle des fêtes…" required />
           </label>
+        </div>
 
-          <div class="estimate-box" aria-live="polite">
-            <div>
-              <span>Estimation indicative</span>
-              <strong id="estimateAmount">890 €</strong>
-              <small>Hors déplacement spécifique et contraintes techniques particulières.</small>
-            </div>
-            <div class="estimate-breakdown" id="estimateBreakdown"></div>
+        <div class="form-step">
+          <span class="step-label">02 — Votre formule</span>
+          <div class="package-select" id="packageSelect"></div>
+        </div>
+
+        <div class="form-step">
+          <span class="step-label">03 — Vos options</span>
+          <div class="option-list" id="addonList"></div>
+        </div>
+
+        <div class="form-step">
+          <span class="step-label">04 — Vos coordonnées</span>
+          <div class="form-grid two">
+            <label>Nom et prénom
+              <input id="fullName" name="fullName" type="text" autocomplete="name" required />
+            </label>
+            <label>Téléphone
+              <input id="customerPhone" name="customerPhone" type="tel" autocomplete="tel" required />
+            </label>
+            <label>Email
+              <input id="customerEmail" name="customerEmail" type="email" autocomplete="email" required />
+            </label>
+            <label>Mode de contact préféré
+              <select id="contactMode" name="contactMode">
+                <option>Email</option>
+                <option>Téléphone</option>
+                <option>WhatsApp</option>
+              </select>
+            </label>
           </div>
-
-          <label class="consent">
-            <input type="checkbox" name="consent" required />
-            <span>J’accepte d’être recontacté au sujet de cette demande de devis. *</span>
+          <label>Précisions utiles
+            <textarea id="message" name="message" rows="4" placeholder="Horaires, accès, contraintes techniques, ambiance souhaitée…"></textarea>
           </label>
+        </div>
 
-          <button class="btn btn-primary submit-btn" type="submit">
-            Envoyer ma demande
-            <span aria-hidden="true">↗</span>
-          </button>
+        <div class="estimate-card">
+          <div>
+            <small>Estimation indicative</small>
+            <strong id="estimateTotal">0 €</strong>
+          </div>
+          <p id="estimateDetails">Sélectionnez une formule pour afficher l'estimation.</p>
+        </div>
 
-          <p class="form-note">
-            Ce formulaire ouvre votre messagerie avec un récapitulatif prérempli.
-            Une intégration Formspree ou un back-office peut être ajoutée ultérieurement.
-          </p>
-        </form>
-      </div>
-    </section>
+        <label class="consent">
+          <input type="checkbox" id="consent" required />
+          <span>J'accepte que mes informations soient utilisées uniquement pour traiter ma demande de devis.</span>
+        </label>
 
-    <section class="cta-band">
-      <div>
-        <span>PRÊT À FAIRE DU BRUIT ?</span>
-        <h2>Créons une expérience dont vos invités se souviendront.</h2>
-      </div>
-      <a class="btn btn-light" href="#devis">Demander un devis</a>
+        <button class="button button-full" type="submit">Envoyer ma demande de devis</button>
+        <p class="form-status" id="formStatus" role="status"></p>
+      </form>
     </section>
   </main>
 
-  <footer>
-    <a class="brand footer-brand" href="#top">
-      <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
-      <span>
-        <strong data-config="brandName">Pulse Event</strong>
-        <small>Son • Lumière • Animation</small>
-      </span>
-    </a>
-
-    <div class="footer-links">
-      <a href="#services">Services</a>
-      <a href="#formules">Formules</a>
-      <a href="#devis">Devis</a>
-      <a data-config-href="instagram" href="#" target="_blank" rel="noreferrer">Instagram</a>
-      <a data-config-href="facebook" href="#" target="_blank" rel="noreferrer">Facebook</a>
+  <footer class="site-footer">
+    <div>
+      <img src="assets/logo.svg" alt="" class="footer-logo" />
+      <p>Animation événementielle • Son • Lumière • Location</p>
     </div>
-
+    <div class="footer-links">
+      <a href="#services">Services</a><a href="#formules">Formules</a><a href="#location">Location</a><a href="#devis">Devis</a>
+    </div>
     <div class="footer-bottom">
-      <span>© <span id="year"></span> <span data-config="brandName">Pulse Event</span>. Tous droits réservés.</span>
-      <span>Estimation non contractuelle.</span>
+      <span>© <span id="year"></span> Loïc Animation.</span>
+      <span>Site vitrine démonstrateur.</span>
     </div>
   </footer>
 
-  <div class="sound-control">
-    <button id="soundToggle" type="button" aria-pressed="false" aria-label="Activer l'ambiance sonore">
-      <span class="sound-bars" aria-hidden="true"><i></i><i></i><i></i></span>
-      <span class="sound-label">Ambiance OFF</span>
-    </button>
-  </div>
-
-  <div class="toast" id="toast" role="status" aria-live="polite"></div>
-
-  <script src="script.js"></script>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
