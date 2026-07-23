@@ -6,7 +6,7 @@ window.SITE_DATA = {
   contact: {
     phone: "+262 692 74 12 42",
     email: "loic.animation.dj@gmail.com",
-    whatsapp: "262692000000",
+    whatsapp: "262692741242",
     googleReviewsUrl: "https://www.google.com/search?q=Loic+Animation+avis",
     // Facultatif : collez ici votre endpoint Formspree, ex. https://formspree.io/f/xxxxxxx
     formEndpoint: ""
