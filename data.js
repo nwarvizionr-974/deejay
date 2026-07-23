@@ -4,8 +4,8 @@
  */
 window.SITE_DATA = {
   contact: {
-    phone: "+262 692 00 00 00",
-    email: "contact@loic-animation.re",
+    phone: "+262 692 74 12 42",
+    email: "loic.animation.dj@gmail.com",
     whatsapp: "262692000000",
     googleReviewsUrl: "https://www.google.com/search?q=Loic+Animation+avis",
     // Facultatif : collez ici votre endpoint Formspree, ex. https://formspree.io/f/xxxxxxx
@@ -76,7 +76,7 @@ window.SITE_DATA = {
     { src: "assets/gallery/event-4.svg", alt: "DJ et public en fête", caption: "Anniversaires" }
   ],
 
-  youtubeVideoId: "ysz5S6PUM-U",
+  youtubeVideoId: "pPcRPX8Z_Kc",
 
   reviews: [
     { name: "Client mariage", rating: 5, text: "Une animation fluide, une très bonne écoute et une piste de danse pleine jusqu'à la fin." },
